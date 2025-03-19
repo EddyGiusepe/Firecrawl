@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "O Firecrawl permite que você transforme sites inteiros em markdown pronto para LLM"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "firecrawl>=1.14.1",
+    "ipykernel>=6.29.5",
+    "langchain-community>=0.3.20",
+]
 
 [dependency-groups]
 dev = [
