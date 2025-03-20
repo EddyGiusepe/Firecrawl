@@ -5,9 +5,14 @@ description = "O Firecrawl permite que você transforme sites inteiros em markdo
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "faiss-cpu>=1.10.0",
     "firecrawl>=1.14.1",
+    "firecrawl-py>=1.14.1",
+    "groq>=0.20.0",
     "ipykernel>=6.29.5",
+    "langchain>=0.3.21",
     "langchain-community>=0.3.20",
+    "ollama>=0.4.7",
 ]
 
 [dependency-groups]
