@@ -1,6 +1,13 @@
 #! /usr/bin/env python3
 """
 Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
+
+Baseado no tutorial de FIRECRAWL
+================================
+
+Running
+-------
+uv run chat_with_website.py 
 """
 # 1. Load website with Firecrawl
 from langchain_community.document_loaders import FireCrawlLoader  # Importing the FirecrawlLoader
@@ -33,7 +40,7 @@ text_splitter=RecursiveCharacterTextSplitter(
     chunk_overlap=200
 )
 splits = text_splitter.split_documents(docs)
-splits = splits[:50]
+splits = splits[:20]
 len(splits)
 vectorstore = FAISS.from_documents(documents=splits,
                                    embedding=OllamaEmbeddings(model="jeffh/intfloat-multilingual-e5-large:f16"))
